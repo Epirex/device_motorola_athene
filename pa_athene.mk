@@ -13,19 +13,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Check for target product
+ifeq (pa_athene,$(TARGET_PRODUCT))
+
+# Inherit some common AOSPA stuff.
+
+# Set bootanimation to 1080p display.
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Inherit from our common CAF device tree.
+include device/qcom/common/common.mk
+
+# Inherit the main configuration from our vendor.
+include vendor/pa/main.mk
 
 $(call inherit-product, device/motorola/athene/full_athene.mk)
 
-# Boot animation
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_BOOTANIMATION_HALF_RES := true
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := athene
-PRODUCT_NAME := aosp_athene
+PRODUCT_NAME := pa_athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := athene
+
+endif
