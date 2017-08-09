@@ -72,6 +72,12 @@
     "revision":    "cm-14.1"
   },
   {
+    "remote":      "bb",
+    "repository":  "matthewdalex/arm-eabi-5.x",
+    "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-5.3",
+    "revision":    "master"
+  },
+  {
     "remote":      "github",
     "repository":  "LineageOS/android_hardware_ril",
     "target_path": "hardware/ril-caf",
