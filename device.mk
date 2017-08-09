@@ -104,7 +104,8 @@ PRODUCT_COPY_FILES +=  \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8952 \
-    libbson
+    libbson \
+    SnapdragonCamera
 
 # Moto Camera
 PRODUCT_COPY_FILES += \
