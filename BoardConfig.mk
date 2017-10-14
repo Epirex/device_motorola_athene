@@ -139,10 +139,6 @@ ENABLE_SCHED_BOOST := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Bootanimation
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-
 # Properties
 TARGET_SYSTEM_PROP += device/motorola/athene/system.prop
 
